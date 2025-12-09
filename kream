@@ -1,0 +1,64 @@
+# The script of the game goes in this file.
+
+# Declare characters used by this game. The color argument colorizes the
+# name of the character.
+
+define e = Character("Eileen")
+define a = Character("Amir")
+define k = Character("Kim")
+
+# The game starts here.
+
+label start:
+
+    # Show a background. This uses a placeholder by default, but you can
+    # add a file (named either "bg room.png" or "bg room.jpg") to the
+    # images directory to show it.
+
+    
+    scene bg van
+
+    # This shows a character sprite. A placeholder is used, but you can
+    # replace it by adding a file named "eileen happy.png" to the images
+    # directory.
+
+    show eileen happy
+
+    # These display lines of dialogue.
+
+    #e "You've created a new Ren'Py game."
+
+    #e "Once you add a story, pictures, and music, you can release it to the world!"
+    e "Hi Amir"
+
+    a  "Hi Eileen"
+    a  "Are you ready for the road trip?"
+    a  "Yeah, I'm excited!"
+    a  " Where is kim? Is she not coming?"
+    k  " I'm here"
+    k  " Sorry, I woke up late"
+    a  " it's okay, we are all packed up, just waiting for your bags"
+    e  " Okay, Let's go"
+
+
+    menu:
+	" Use GPS ":
+		"You selected use gps"
+			$ choice1 == "1"
+			jump option1
+	"Go where the road takes us":
+			$ choice1 == "2"
+		
+			jump option2
+
+label option 1:
+	" You are following the gps and are heading to new york"
+	jump after_choices
+label option 2:
+	" interesting choice!" 
+	jump after_choices
+label after_choices:
+    
+    # This ends the game.
+
+    return
