@@ -56,8 +56,9 @@ label option 1:
 label option 2:
 	" interesting choice!" 
 	jump after_choices
-label after_choices:
+label after_choices: 
     
     # This ends the game.
 
     return
+
