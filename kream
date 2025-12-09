@@ -48,7 +48,6 @@ label start:
 			jump option1
 	"Go where the road takes us":
 			$ choice1 == "2"
-		
 			jump option2
 
 label option 1:
